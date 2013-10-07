@@ -158,7 +158,6 @@ class BSPPeer:
         println(bp.getAckProtocolString(code))
 
     def done(self):
-        println(bp.getProtocolString(bp.TASK_DONE))
         println(bp.getProtocolString(bp.DONE))
 
     def log(self, msg):
