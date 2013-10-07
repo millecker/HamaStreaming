@@ -61,7 +61,13 @@ class BSPPeer:
         if line == "%%-1%%":
             return False
 
-        return line;
+        # TODO
+        # Problem reported by Roman:
+        # If I send any message of the length L, I receive the message with
+        # additional (L-1)/2 '^@' symbols after it.
+
+        # return line;
+        return line[:len(line)-len(line)//3]
 
     def getAllMessages(self):
         msgs = []
